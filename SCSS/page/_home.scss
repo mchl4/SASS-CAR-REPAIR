@@ -1,0 +1,207 @@
+@use "../abstract/" as*;
+@use "../base/" as*;
+@use "../component/" as*;
+@use "../vendor/" as*;
+@use "../layout/" as*;
+
+.banner{
+  h2{
+    @include mediaQuery{
+        position: absolute;
+        z-index: 999;
+        bottom: 20rem;
+        transform: translateX(145%);
+        font-size: 4rem;
+    }
+  }
+    &__wrapper{
+        background-color: $clr-accent;
+    }
+    
+    img{
+        @include mediaQuery{
+            width:50%;
+        }
+    }
+  
+    
+}
+
+.services{
+
+    
+    &__wrapper{
+        @include mediaQuery{
+            padding: 5rem 10rem;
+        }
+        background-color: $clr-dark;
+        margin: 3rem 0;
+        padding: 3rem 2rem;
+    }
+    &__cards{
+        @include mediaQuery{
+            @include grid(4);
+            gap: 5rem;
+            h3{
+                font-size: 2rem;
+                text-transform: uppercase;
+            }
+
+            
+        }
+        display: flex;
+        flex-direction: column;
+        gap: 5rem;
+        padding: 5rem 1rem;
+        .card{
+            @include flex(space-between,center);
+            flex-direction: column;
+            gap: 2rem;
+            h3{
+                text-transform: uppercase;
+            }
+            p{
+                text-align: center;
+            }
+            i{
+                font-size: 3rem;
+            }
+            &__btn{
+                background-color: $clr-accent;
+                padding:1rem;
+                width: 50%;
+                text-align: center;
+            }
+            span{
+                @include mediaQuery{
+                    height: 0.2rem;
+                    width: 115%;
+                }
+                display: inline-block;
+                position: relative;
+                content: " ";
+                background-color: $clr-neutral;
+                width: 100%;
+                height: 0.1rem;
+                bottom: 1.5rem;
+                opacity: 20%;
+            }
+        }
+    }
+}
+
+.services2{
+    
+    .cards{
+        @include mediaQuery{
+            
+        }
+        @include flex (space-between,center);
+        flex-direction: column;
+    }
+    &__wrapper{
+        
+        @include mediaQuery{
+           padding:10rem;
+            
+        }
+    background-color: $clr-accent;
+    padding: 5rem 2rem;
+    }
+    h2{
+       
+        text-transform: uppercase;
+        font-size: 3rem;
+        margin-bottom: 0;
+    }
+    span{
+        display: inline-block;
+        position: relative;
+        content: " ";
+        background-color: $clr-neutral;
+        width: 100%;
+        height: 0.2rem;
+        bottom: 1.5rem;
+        opacity: 30%;
+    }
+    .card{
+        @include mediaQuery{
+            img{
+                width: auto;
+            }
+            p{
+                width: auto-fit;
+            }
+        }
+    }
+    
+}
+
+.about{
+    &__wrapper{
+        background-color: $clr-neutral;
+        padding: 3rem;
+    }
+    
+    &__content{
+        @include mediaQuery{
+            display: flex;
+            flex-direction: row;
+            padding: 10rem;
+        }
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+        padding: 5rem 0;
+        ul{
+            color: $clr-dark;
+            h2{
+            color: $clr-dark;
+            font-size: 4rem;
+            text-align: center;
+            }
+            
+            span{
+                display: inline-block;
+                position: relative;
+                content: " ";
+                background-color: $clr-primary;
+                width: 100%;
+                height: 0.1rem;
+                bottom: 1.5rem;
+                margin-top: 3rem;
+                opacity: 20%
+            }
+        }
+        
+
+        
+    }
+}
+
+.cta{
+    &__wrapper{
+        @include mediaQuery{
+            padding: 10rem;
+        }
+        padding: 2rem;
+        background-color: $clr-dark;
+    }
+   
+    h2{
+        font-size: 4rem;
+    }
+    a{
+    background-color: $clr-accent;
+    padding:1rem;
+    width: 50%;
+    text-align: center;
+    }
+    i{
+        font-size: 2rem;
+    }
+    .req{
+        display: flex;
+        gap: 1rem;
+    }
+}

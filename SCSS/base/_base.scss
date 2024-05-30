@@ -1,0 +1,85 @@
+@use '../abstract' as *;
+
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&display=swap');
+
+
+@font-face {
+    font-family: "UbuntuCondensed-Regular";
+    src: url('../../font/UbuntuCondensed-Regular.ttf');
+}
+
+
+
+html {
+    font-size: 10px;
+}
+
+body {
+    font-family: "UbuntuCondensed-Regular", arial, sans-serif;
+    color: rgba($clr-neutral,0.7);
+    background-color: $clr-primary;
+    line-height: 1.6;
+    font-size: 1.6rem;
+    color: $clr-neutral;
+   
+}
+
+body.open {
+     overflow: hidden;
+     height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    color: $clr-neutral;
+}
+
+ul {
+    list-style: none;
+    color: $clr-neutral;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-weight: bold;
+    font-family: "UbuntuCondensed-Regular";
+    text-wrap: balance;
+    color: $clr-neutral;
+}
+
+h1 {
+    font-size: clamp(3.5rem, 6vw , 5.5rem);
+    margin-bottom: 2rem;
+}
+
+h2 {
+    font-size: clamp(2.2rem, 6vw , 3rem);
+    margin-bottom: 2rem;
+}
+
+h3 {
+    font-size: clamp(2rem, 6vw , 2.5rem);
+    margin-bottom: 1.6rem;
+}
+
+h4 {
+    font-size: clamp(1.4rem, 6vw , 1.6rem);
+    margin-bottom: 1.6rem;
+}
+
+p {
+    font-size: clamp(1.4rem, 6vw , 1.6rem);
+    font-family: "Calibri";
+    margin-bottom: 1.3rem;
+    color: $clr-neutral;
+}
+
+.container {
+    max-width: 110rem;
+    padding: 0 1.6rem;
+    margin: 0 auto;
+}
+
+button{
+    color: $clr-dark;
+}
